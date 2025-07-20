@@ -33,7 +33,10 @@ def generate_questions_for_rows(file_path, output_file):
             questions = chat_completion.choices[0].message.content
             file.write(f"Questions for Row {index + 1} based on keywords:\n{questions}\n\n")
             print(f"Questions for Row {index + 1} saved.")
-
-output_file = "generated_questions_main.txt"
-generate_questions_for_rows(filepath, output_file)
-print(f"All questions have been saved in {output_file}.")
+def main():
+    
+    output_file = "generated_questions_main.txt"
+    generate_questions_for_rows(filepath, output_file)  
+    print(f"All questions have been saved in {output_file}.")
+if __name__ == "__main__":
+    main()
